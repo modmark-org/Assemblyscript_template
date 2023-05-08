@@ -1,0 +1,42 @@
+{
+  "name": "modmark-template",
+  "version": "1.0.0",
+  "description": "A template for modmark projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modmark-org/Assemblyscript_template.git"
+  },
+  "keywords": [
+    "assemblyscript",
+    "modmark"
+  ],
+  "author": "bruhng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modmark-org/Assemblyscript_template/issues"
+  },
+  "homepage": "https://github.com/modmark-org/Assemblyscript_template#readme",
+  "devDependencies": {
+    "@assemblyscript/wasi-shim": "^0.1.0",
+    "assemblyscript": "^0.27.5"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "dependencies": {
+    "as-wasi": "^0.6.0",
+    "assemblyscript-json": "^1.1.0"
+  }
+}
