@@ -7,6 +7,7 @@ This is a template for Assemblyscript projects. It includes a basic setup for a 
 3. Run `npm run asbuild` to build the project
 
 ## Usage
+1. Edit code in `assembly/index.ts`
 1. Run `npm run asbuild` to build the project
 2. Uppload `release.wasm` to the modmark.org website to test it.
 3. Import and use it like this: 
